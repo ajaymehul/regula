@@ -28,6 +28,7 @@ __rego__metadoc__ := {
   }
 }
 
+# Specify resource type
 resource_type = "aws_s3_bucket"
 
 # Explicitly allow AES256 or aws:kms server side SSE algorithms.
