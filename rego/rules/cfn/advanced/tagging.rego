@@ -65,7 +65,7 @@ mandatory_tags = {
 # Set difference to check if all the mandatory_tags are in input_tags
 contains_all_tags (resource) {
     # Set Comprehension for getting names of tags in resource
-    input_tags := resource.tags[_].key
+    input_tags := resource.Tags[_].Key
     count(mandatory_tags - input_tags) <= 0
 }
 
