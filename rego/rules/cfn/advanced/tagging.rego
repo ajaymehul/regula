@@ -1,4 +1,4 @@
-package rules.cfn_aws_tagging
+package rules.tf_aws_tagging
 __rego__metadoc__ := {
   "id": "FG_R00201",
   "title": "Resource should contain tags adhering to tagging policy",
@@ -65,7 +65,7 @@ mandatory_tags = {
 # Set difference to check if all the mandatory_tags are in input_tags
 contains_all_tags (resource) {
     # Set Comprehension for getting names of tags in resource
-    input_tags := resource.Tags[_].Key
+    input_tags := {tagname | resource.tags[i] ; tagname := i}
     count(mandatory_tags - input_tags) <= 0
 }
 
