@@ -1,4 +1,4 @@
-package rules.tf_aws_tagging
+package rules.cfn_aws_tagging
 __rego__metadoc__ := {
   "id": "FG_R00201",
   "title": "Resource should contain tags adhering to tagging policy",
